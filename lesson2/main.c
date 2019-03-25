@@ -22,7 +22,7 @@ void DecToBin(int x)
 int power(int a, int b)
 {
 	if (b > 0)
-		return a * power(a, b-1);
+		return a * power(a, b - 1);
 	return 1;
 }
 
@@ -38,22 +38,22 @@ int main(int argc, const char *argv[])
 	printf("\nДвоичное число:");
 	DecToBin(a1);
 
-//2.	Реализовать функцию возведения числа a в степень b:
-	//a.Без рекурсии.
+	//2.	Реализовать функцию возведения числа a в степень b:
+		//a.Без рекурсии.
 	int a2;
 	int b2;
 	int bb;
-	int rez=1;
+	int rez = 1;
 	printf("\nРеализовать функцию возведения числа a в степень b\n");
 	printf("Введите число и степень через пробел: ");
 	scanf("%d %d", &a2, &b2);
 	bb = b2;
-	while (bb>0)
+	while (bb > 0)
 	{
-		rez = a2*rez;
+		rez = a2 * rez;
 		bb--;
 	}
-	printf("\nРезультат без рекурсии %d",rez);
+	printf("\nРезультат без рекурсии %d", rez);
 	//b.Рекурсивно
-	printf("\nРезультат c рекурсией %d", power(a2,b2));
+	printf("\nРезультат c рекурсией %d", power(a2, b2));
 }
